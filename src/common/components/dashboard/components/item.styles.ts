@@ -2,9 +2,8 @@ import { css } from '@emotion/css';
 import { theme } from 'core/theme';
 
 export const root = css`
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 4fr .25fr .25fr .3fr .3fr .3fr;
+  display: flex;
+  flex-direction: column;
   text-align: center;
   padding: 15px;
   text-decoration: none;
@@ -14,14 +13,29 @@ export const root = css`
   box-shadow: 1px 1px 5px #b2c9f3;
   transition: .3s;
 
-  @media (min-width: ${theme.breakpoints.values.md}px) {
-    grid-template-rows: 4fr .7fr .4fr .4fr .4fr .4fr;
+  @media (min-width: ${theme.breakpoints.values.sm}px) { // Tablet
+    display:grid;
+    grid-template-rows: 10fr 1fr 1fr 1fr 1fr 1fr;
+  }
+  @media (min-width: ${theme.breakpoints.values.md}px) { // Desktop
+    display:grid;
+    grid-template-rows: 6.5fr .8fr .8fr .8fr .6fr 1fr;
   }
 
   &:hover {
     background-color: #f3f3f3;
     margin-bottom:5px
   }
+`;
+
+export const smallCard = css`
+  display: flex!important;
+  flex-direction: column!important;
+`;
+
+export const mediumCard = css`
+  display: grid!important;
+  grid-template-rows: 6.5fr 1fr 1fr 1fr 1fr 1fr!important;
 `;
 export const buttonContainer = css`
   display: flex;
@@ -31,6 +45,8 @@ export const buttonContainer = css`
 export const image = css`
   width: 100%;
   justify-self: center;
+  grid-row-start:1;
+  grid-row-end:1;
 `;
 
 export const textRow = css`
@@ -50,6 +66,9 @@ export const title = css`
 export const lastPrice = css`
   font-size: .9rem;
   text-decoration: line-through;
+  @media (min-width: ${theme.breakpoints.values.sm}px) { // Tablet
+    align-self:end;
+  }
 `;
 export const price = css`
   font-size: .9rem;
@@ -70,8 +89,11 @@ export const add = css`
   text-transform: uppercase;
   color:#FFF;
   transition: .3s;
+  align-self:center;
 
   &:hover {
     background-color: #0d64c1;
   }
+
+
 `;
