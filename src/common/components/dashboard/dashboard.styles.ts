@@ -19,3 +19,10 @@ export const items = css`
     grid-template-columns: repeat(5, 1fr);
   }
 `;
+
+export const addColumn = css`
+  grid-template-columns: repeat(2, 1fr);
+`;
+export const reduceColumn = css`
+  grid-template-columns: repeat(1, 1fr);
+`;

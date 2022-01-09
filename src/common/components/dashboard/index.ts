@@ -1,2 +1,2 @@
 export * from './dashboard.component';
-export { DashboardItemProps } from './dashboard.vm';
+export { DashboardItemProps} from './dashboard.vm';

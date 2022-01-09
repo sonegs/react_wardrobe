@@ -6,9 +6,6 @@ export const searchBar = css`
   flex-direction: column-reverse;
   align-items: center;
 
-  @media (min-width: ${theme.breakpoints.values.sm}px) {
-    //grid-template-columns: repeat(2, 1fr);
-  }
   @media (min-width: ${theme.breakpoints.values.md}px) {
     flex-direction: row;
     justify-content:space-between;
@@ -23,4 +20,5 @@ export const textField = css`
 export const searchBarIcons = css`
   font-size: 3rem!important;
   color:#d9d9d9;
+  cursor: pointer
 `;

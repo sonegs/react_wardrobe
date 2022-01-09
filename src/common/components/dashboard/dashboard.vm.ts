@@ -1,3 +1,5 @@
+import { ClassesProps } from './components';
+
 export interface DashboardItemProps {
   id: number;
   image: string;
@@ -8,3 +10,21 @@ export interface DashboardItemProps {
   otherColors?: string;
   add: string;
 }[]
+
+export interface ClassesColumns{
+  small: string;
+  medium: string;
+  big: string;
+}
+
+
+interface ClassNameProps {
+  root?: string;
+  items?: string;
+  item?: ClassesProps;
+}
+
+export interface DashboardComponentProps {
+  items: DashboardItemProps[];
+  classes?: ClassNameProps;
+}

@@ -1,27 +1,39 @@
 import React from 'react';
 import { cx } from '@emotion/css';
 import { ItemComponent, ClassesProps } from './components';
-import { DashboardItemProps } from './dashboard.vm';
+import { ClassesColumns, DashboardComponentProps} from './dashboard.vm';
 import * as innerClasses from './dashboard.styles';
+import { ProductsListContext } from 'pods/productsList/products-list.context';
+import { theme } from 'core/theme';
 
-interface ClassNameProps {
-  root?: string;
-  items?: string;
-  item?: ClassesProps;
+const classesColumns: ClassesColumns = {
+  small: innerClasses.reduceColumn,
+  medium: innerClasses.addColumn,
+  big: ''
 }
 
-interface Props {
-  items: DashboardItemProps[];
-  classes?: ClassNameProps;
+const getColumns = sizeColumns => classesColumns[sizeColumns] || "";
+
+const changeNumColumns = () => {
+  const {sizeColumns} = React.useContext(ProductsListContext);
+  const maxSmallWidthDevice = theme.breakpoints.values.md;
+  const widthDevice = window.innerWidth;
+
+  return widthDevice < maxSmallWidthDevice ? getColumns(sizeColumns) : "";
+
 }
 
-export const DashboardComponent: React.FunctionComponent<Props> = props => {
+export const DashboardComponent: React.FunctionComponent<DashboardComponentProps> = props => {
+
   const { items, classes } = props;
+
+  const numColumns = changeNumColumns();
+
   return (
     <div
       className={cx(innerClasses.root, classes.root)}
     >
-      <div className={cx(innerClasses.items, classes.items)}>
+      <div className={cx(innerClasses.items, classes.items, numColumns)}>
         {items.map(
           item =>
             Boolean(item) && (
@@ -29,7 +41,7 @@ export const DashboardComponent: React.FunctionComponent<Props> = props => {
                 key={item.title}
                 classes={{
                   ...classes.item,
-                  root: cx(classes.item.root),
+                  root: cx(classes.item.root)
                 }}
                 item={item}
               />

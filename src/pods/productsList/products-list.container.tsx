@@ -5,18 +5,16 @@ import TextField from "@material-ui/core/TextField";
 import InputAdornment from "@material-ui/core/InputAdornment";
 import SearchIcon from "@material-ui/icons/Search";
 import IconButton from "@material-ui/core/IconButton";
-import AddIcon from "@material-ui/icons/Add";
-import RemoveIcon from "@material-ui/icons/Remove";
 import { cx } from '@emotion/css';
 import * as innerClasses from './products-list.styles';
+import { ProductsListContext } from './products-list.context';
+import AddIcon from "@material-ui/icons/Add";
+import RemoveIcon from "@material-ui/icons/Remove";
 
-export const ProductsListContainer: React.FunctionComponent = () => {
+const useProductList = () => {
 
   const [filter, setFilter] = React.useState("");
   const [productsList, setProductsList] = React.useState([]);
-  const [deleteColumn, setDeleteColumn] = React.useState(1);
-  const [addColumn, setAddColumn] = React.useState(2);
-  const [column, setColumn] = React.useState(0);
 
   React.useEffect(() => {
 
@@ -31,15 +29,14 @@ export const ProductsListContainer: React.FunctionComponent = () => {
     (): DashboardItemProps[] => productsList, [productsList]
   );
 
-  const reduceColumn = e => {
-    e.preventDefault();
-    setColumn(deleteColumn);
-  };
+  return {filter, setFilter, items}
 
-  const duplicateColumn = e => {
-    e.preventDefault();
-    setColumn(addColumn);
-  };
+}
+
+export const ProductsListContainer: React.FunctionComponent = () => {
+
+  const {filter, setFilter, items} = useProductList();
+  const {sizeColumns, setSizeColumns} = React.useContext(ProductsListContext);
 
     return <>
       <div className={cx(innerClasses.searchBar)}>
@@ -64,11 +61,11 @@ export const ProductsListContainer: React.FunctionComponent = () => {
         <div>
           <RemoveIcon
             className={cx(innerClasses.searchBarIcons)}
-            onClick={reduceColumn}
+            onClick={() => setSizeColumns("small")}
           />
           <AddIcon
             className={cx(innerClasses.searchBarIcons)}
-            onClick={duplicateColumn}
+            onClick={() => setSizeColumns("medium")}
             />
         </div>
       </div>
