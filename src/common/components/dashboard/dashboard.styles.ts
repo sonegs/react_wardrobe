@@ -3,7 +3,7 @@ import { theme } from 'core/theme';
 
 export const root = css`
   display: grid;
-  grid-template-columns: 1;
+  grid-template-columns: 1fr;
   padding-top:20px;
 `;
 
@@ -21,8 +21,8 @@ export const items = css`
 `;
 
 export const addColumn = css`
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(2, 1fr)!important;
 `;
 export const reduceColumn = css`
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(1, 1fr)!important;
 `;

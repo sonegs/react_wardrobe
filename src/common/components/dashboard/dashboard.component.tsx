@@ -1,27 +1,9 @@
 import React from 'react';
 import { cx } from '@emotion/css';
-import { ItemComponent, ClassesProps } from './components';
-import { ClassesColumns, DashboardComponentProps} from './dashboard.vm';
+import { ItemComponent } from './components';
+import { DashboardComponentProps} from './dashboard.vm';
+import { changeNumColumns } from './dashboard.tools';
 import * as innerClasses from './dashboard.styles';
-import { ProductsListContext } from 'pods/productsList/products-list.context';
-import { theme } from 'core/theme';
-
-const classesColumns: ClassesColumns = {
-  small: innerClasses.reduceColumn,
-  medium: innerClasses.addColumn,
-  big: ''
-}
-
-const getColumns = sizeColumns => classesColumns[sizeColumns] || "";
-
-const changeNumColumns = () => {
-  const {sizeColumns} = React.useContext(ProductsListContext);
-  const maxSmallWidthDevice = theme.breakpoints.values.md;
-  const widthDevice = window.innerWidth;
-
-  return widthDevice < maxSmallWidthDevice ? getColumns(sizeColumns) : "";
-
-}
 
 export const DashboardComponent: React.FunctionComponent<DashboardComponentProps> = props => {
 
