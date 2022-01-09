@@ -6,6 +6,8 @@ interface Props {
 }
 
 export const ProductsListComponent: React.FunctionComponent<Props> = props => {
+
   const { items } = props;
   return <DashboardComponent items={items} />;
+
 };
