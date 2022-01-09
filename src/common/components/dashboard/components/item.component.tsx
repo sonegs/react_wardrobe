@@ -2,6 +2,7 @@ import React from 'react';
 import { cx } from '@emotion/css';
 import { Link } from 'react-router-dom';
 import { DashboardItemProps } from '../dashboard.vm';
+import { changeStylesCards } from './item.tools';
 import * as innerClasses from './item.styles';
 
 export interface ClassesProps {
@@ -19,6 +20,7 @@ interface Props {
   classes?: ClassesProps;
 }
 
+
 export const ItemComponent: React.FunctionComponent<Props> = props => {
   const {
     item: {image,
@@ -33,10 +35,11 @@ export const ItemComponent: React.FunctionComponent<Props> = props => {
 
   const styleApplyDiscount = ()  => (lastPrice == '') ? 'black' : 'red';
   const applyDiscountStyle: React.CSSProperties = { color: styleApplyDiscount() }
+  const gridCard = changeStylesCards();
 
   return (
     <div
-        className={cx(innerClasses.root, classes.root)}
+        className={cx(innerClasses.root, classes.root, gridCard)}
     >
       <img
           src={image}
