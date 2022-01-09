@@ -1,0 +1,88 @@
+{
+  "productsList": [
+    {
+        "id": 1,
+        "image": "https://media.mayoral.com/wcsstore/mayoral/images/catalog/mayoral/polo-manga-larga-combinado-nino_id_11-04154-066-L-4.JPG?v=20210705052234",
+        "title": "Polo manga larga Activity",
+        "price": 18.99,
+        "discount": 20,
+        "otherColors": "más colores",
+        "add": "añadir"
+    },
+    {
+        "id": 2,
+        "image": "https://media.mayoral.com/wcsstore/mayoral/images/catalog/mayoral/polo-manga-larga-combinado-bebe-nino_id_11-02141-047-M-4.JPG?v=20210428111531",
+        "title": "Polo manga larga corte",
+        "price": 20.99,
+        "otherColors": "más colores",
+        "add": "añadir"
+    },
+    {
+        "id": 3,
+        "image": "https://media.mayoral.com/wcsstore/mayoral/images/catalog/mayoral/polo-manga-larga-rayas-bebe-nino_id_11-02140-059-M-4.JPG?v=20210810113956",
+        "title": "Polo manga larga bandas",
+        "price": 18.99,
+        "discount": 20,
+        "otherColors": "más colores",
+        "add": "añadir"
+    },
+    {
+        "id": 4,
+        "image": "https://media.mayoral.com/wcsstore/mayoral/images/catalog/mayoral/polo-manga-larga-rayas-bebe-nino_id_11-02140-060-M-4.JPG?v=20210810113956",
+        "title": "Polo manga larga bandas edición especial",
+        "price": 16.99,
+        "add": "añadir"
+    },
+    {
+        "id": 5,
+        "image": "https://media.mayoral.com/wcsstore/mayoral/images/catalog/mayoral/polo-manga-larga-raya-bloque-nino_id_11-04156-088-M-4.JPG?v=20210730111904",
+        "title": "Polo manga larga 3 bandas",
+        "price": 18.99,
+        "discount": 20,
+        "otherColors": "más colores",
+        "add": "añadir"
+    },
+    {
+        "id": 6,
+        "image": "https://media.mayoral.com/wcsstore/mayoral/images/catalog/mayoral/polo-manga-larga-rayas-bebe-nino_id_11-02140-058-M-4.JPG?v=20210429045047",
+        "title": "Polo manga larga bandas inglesas",
+        "price": 20.99,
+        "otherColors": "más colores",
+        "add": "añadir"
+    },
+    {
+        "id": 7,
+        "image": "https://media.mayoral.com/wcsstore/mayoral/images/catalog/mayoral/polo-manga-larga-chico_id_11-57131-700-M-4.JPG?v=20210824152659",
+        "title": "Polo manga larga cuadros",
+        "price": 18.99,
+        "discount": 40,
+        "otherColors": "más colores",
+        "add": "añadir"
+    },
+    {
+        "id": 8,
+        "image": "https://media.mayoral.com/wcsstore/mayoral/images/catalog/mayoral/polo-manga-larga-cuello-mao-bandas-chico_id_11-57130-700-M-4.JPG?v=20210824152658",
+        "title": "Polo manga larga escudo N",
+        "price": 12.99,
+        "otherColors": "más colores",
+        "add": "añadir"
+    },
+    {
+        "id": 9,
+        "image": "https://media.mayoral.com/wcsstore/mayoral/images/catalog/mayoral/polo-manga-larga-desagujado-blocking-nino_id_11-55125-701-M-4.JPG?v=20210827045456",
+        "title": "Polo manga larga escudo M",
+        "price": 18.99,
+        "discount": 20,
+        "otherColors": "más colores",
+        "add": "añadir"
+    },
+    {
+        "id": 10,
+        "image": "https://media.mayoral.com/wcsstore/mayoral/images/catalog/mayoral/polo-manga-larga-combinado-bebe-nino_id_11-02141-048-M-4.JPG?v=20210727072208",
+        "title": "Polo manga larga corte holandes",
+        "price": 15.99,
+        "otherColors": "más colores",
+        "add": "añadir"
+    }
+  ]
+}

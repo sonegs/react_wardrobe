@@ -1,0 +1,16 @@
+{
+    "name": "server",
+    "version": "1.0.0",
+    "description": "",
+    "main": "db.js",
+    "scripts": {
+        "start": "json-server --routes ./config/routes.json --watch ./src/db.js --port 3001"
+    },
+    "keywords": [],
+    "author": "",
+    "license": "ISC",
+    "devDependencies": {
+        "faker": "^4.1.0",
+        "json-server": "^0.17.0"
+    }
+}
