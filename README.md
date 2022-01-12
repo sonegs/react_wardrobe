@@ -2,6 +2,7 @@
 
 ### Comandos para visualizar el resultado:
 
+- npm install: Instala las dependencias necesarias para visualizar el resultado.
 - npm start: Muestra la aplicación web.
 - npm run cy: Muestra la interfaz de Cypress para lanzar los tests e2e.
 
